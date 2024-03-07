@@ -3,14 +3,12 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import GroupList from "./components/GroupList";
 import GroupDetail from "./components/GroupDetail";
 import Home from "./components/Home";
-
+import Header from "./components/Header";
 function App() {
   return (
     <Router>
+      <Header />
       <div>
-        <nav>
-          <Link to="/group">学生団体一覧</Link>
-        </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/group" element={<GroupList />} />
